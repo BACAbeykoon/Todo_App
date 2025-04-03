@@ -14,7 +14,15 @@ class MyToDo extends StatefulWidget {
 }
 
 class _MyToDoState extends State<MyToDo> {
+  final todos = Todo.toDoList();
+  List<Todo> _searchtodo = [];
   @override
+  initState() {
+    setState(() {
+      _searchtodo = todos;
+    });
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 240, 234, 234),
@@ -38,6 +46,7 @@ _body() {
   return Stack(
     children: [
       Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           _searchBar(),
 
@@ -69,7 +78,15 @@ _searchBar() {
 }
 
 _toDos() {
-  return TodoItem(todo: Todo(id: "1", title: "Gym"));
+  return Expanded(
+    child: Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [Text("All Todos")],
+      ),
+    ),
+  );
 }
 
 _inputTodo() {

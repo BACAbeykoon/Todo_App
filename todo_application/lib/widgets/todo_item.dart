@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:todo_application/models/todo.dart';
+import 'package:todo_application/models/todo.dart' show Todo;
 
 class TodoItem extends StatelessWidget {
   final Todo todo;
-  final Function onDelete;
-  final Function onTick;
+  final Function ondelete;
+  final Function onclick;
+
   const TodoItem({
     super.key,
     required this.todo,
-    required this.onDelete,
-    required this.onTick,
+    required this.ondelete,
+    required this.onclick,
   });
 
   @override
@@ -18,12 +19,13 @@ class TodoItem extends StatelessWidget {
       padding: const EdgeInsets.all(12.0),
       child: Container(
         decoration: BoxDecoration(
-          color: const Color.fromARGB(221, 13, 13, 13),
+          color: Colors.black,
           borderRadius: BorderRadius.circular(15),
         ),
+
         child: ListTile(
           onTap: () {
-            onTick();
+            onclick();
           },
           leading: Icon(
             todo.isDone
@@ -37,7 +39,7 @@ class TodoItem extends StatelessWidget {
           ),
           trailing: IconButton(
             onPressed: () {
-              onDelete();
+              ondelete();
             },
             icon: Icon(Icons.delete, color: Colors.red),
           ),

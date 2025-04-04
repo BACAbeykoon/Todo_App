@@ -11,9 +11,9 @@ class Todo {
 
   static List<Todo> toDoList() {
     return [
-      Todo(id: "1", title: "Buy Book"),
-      Todo(id: "2", title: "Go to School"),
-      Todo(id: "3", title: "Play Cricket"),
+      Todo(id: "1", title: "Read Books"),
+      Todo(id: "2", title: "Buy Milk", isDone: true),
+      Todo(id: "3", title: "Buy Egg"),
     ];
   }
 }

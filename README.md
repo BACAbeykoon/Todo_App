@@ -1,19 +1,23 @@
-📝 Flutter Firebase To-Do App
-A clean and minimal To-Do app built using Flutter and Firebase Firestore. This app showcases seamless CRUD (Create, Read, Update, Delete) operations in real-time, making it an excellent starter project for beginners exploring Flutter with Firebase integration.
+📝 Flutter Offline To-Do App (Local Storage)
+A lightweight and intuitive To-Do application built with Flutter, focusing on local storage for task management. This app allows users to manage their tasks offline with full CRUD functionality and search filtering.
 
 🚀 Features
-✅ Add Task – Quickly add tasks with a title.
+✅ Add Task – Create new tasks easily.
 
-📋 View Tasks – Instantly view your task list with timestamps.
+📋 View Tasks – Browse your saved task list.
 
-✏️ Update Task – Edit task names with ease.
+🔍 Search & Filter – Quickly find tasks using keywords.
 
-🗑️ Delete Task – Remove tasks when they’re done.
+✏️ Update Task – Edit existing task names.
+
+🗑️ Delete Task – Remove tasks when completed.
+
+💾 Offline Storage – All data is stored locally on the device.
 
 🔧 Tech Stack
-💙 Flutter (Frontend)
+💙 Flutter (UI & Logic)
 
-🔥 Firebase Firestore (Backend)
+📦 Local Storage (e.g., SharedPreferences, Hive, or sqflite)
 
-Whether you're learning Firebase or Flutter, this app offers a solid base to understand how to manage real-time data with smooth UI interactions.
-Perfect for beginners and developers looking to build scalable, cloud-powered mobile apps.
+This project is perfect for beginners who want to learn Flutter state management and local data persistence without diving into cloud services right away. A great starting point before moving on to Firebase or other backends.
+
